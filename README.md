@@ -10,9 +10,13 @@ Database: MongoDM
 
 # API Endpoints
 ```Get all events: /api/events```
+
 ```Get a single event: /api/events/:id```
+
 ```Post an event: /api/events/post```
+
 ```Put an event: /api/events/edit/:id```
+
 ```Delete an event: /api/events/delete/:id```
 
 # Installation
