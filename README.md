@@ -22,9 +22,13 @@ Database: MongoDM
 # Installation
 1. Fork the repository
 2. Clone the repository at your IDE
+
 ``` git clone ```
 3. Create a branch where BRANCH_NAME will be your name
+
 ```git branch BRANCH_NAME```
+
 ```git checkout Branch_NAME```
 3. Install dependencies
+
 ```npm install```
