@@ -1,11 +1,13 @@
+/* The entry point of the backend application. It sets up the Express server, defines the middleware for handling requests and connects to MongoDB. */
+
 require('dotenv').config();
-const express = require('express'); // Requires express in the server.js file
+const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const eventRoutes = require('./routes/events');
 const morgan = require('morgan');
 
-const app = express(); // Initialize express so we can use it in our application
+const app = express();
 
 // Middleware
 app.use(express.json());

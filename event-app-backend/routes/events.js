@@ -1,3 +1,5 @@
+// It handles the RESTful API routes to manage the events. 
+
 const express = require('express');
 const Event = require('../models/Event');
 const router = express.Router();
@@ -8,7 +10,7 @@ router.get('/', async (req, res) => {
         const events = await Event.find();
         res.json(events);
     } catch (err) {
-        res.status(500).json({ eroor: err.message });
+        res.status(500).json({ error: err.message });
     }
 });
 
@@ -37,7 +39,7 @@ router.post('/post/', async (req, res) => {
 // Put (Update) an event
 router.put('/edit/:id', async (req, res) => {
     try {
-        const updateEvent = await Event.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        const updatedEvent = await Event.findByIdAndUpdate(req.params.id, req.body, { new: true });
         if (!updatedEvent) return res.status(404).json({ message: 'Event not found' });
         res.json(updatedEvent);
     } catch (err) {
@@ -48,8 +50,8 @@ router.put('/edit/:id', async (req, res) => {
 // Delete an event
 router.delete('/delete/:id', async (req, res) => {
     try {
-        const deleteEvent = await Event.findByIdAndDelete(req.params.id);
-        if (!deletedEvent)return res.status(404).json({ message: 'Event not found' });
+        const deletedEvent = await Event.findByIdAndDelete(req.params.id);
+        if (!deletedEvent) return res.status(404).json({ message: 'Event not found' });
         res.json({ message: 'Event deleted successfully!' });
     } catch {
         res.status(500).json({ error: err.message });
