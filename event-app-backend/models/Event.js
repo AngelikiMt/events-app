@@ -1,3 +1,5 @@
+// Defines the MongoDB schema
+
 const mongoose = require('mongoose');
 
 const eventSchema = new mongoose.Schema({
