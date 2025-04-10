@@ -15,7 +15,7 @@ app.use(cors());
 app.use(morgan('dev'));
 
 // Routes
-app.use('/events', eventRoutes); // Create the routes imported from ./routes/events file.
+app.use('/', eventRoutes); // Create the routes imported from ./routes/events file.
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {

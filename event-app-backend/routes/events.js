@@ -4,8 +4,16 @@ const express = require('express');
 const router = express.Router();
 const Event = require('../models/Event');
 
+const Cities = ['ATHENS', 'THESSALONIKI', 'PATRA', 'LARISSA'];
+const Categories = ['MUSIC', 'SPORTS', 'CULTURE', 'FOOD', 'ARTS', 'EDUCATION', 'ENTERTAINMENT'];
+
+// Get homepage
+router.get('/', (req, res) => {
+    res.send('Welcome to BookNGo APP!! /n You can browse on /events, /events/:city, or /events/category/:category');
+});
+
 // Get all events
-router.get('/', async (req, res) => {
+router.get('/events', async (req, res) => {
     try {
         const events = await Event.find();
         res.json(events);
@@ -14,14 +22,32 @@ router.get('/', async (req, res) => {
     }
 });
 
-// Get a single event by ID
-router.get('/:id', async (req, res) => {
+// GET events by city (e.g., /events/Thessaloniki)
+router.get('/events/:city', async (req, res) => {
+    const city = req.params.city.toUpperCase();
+    if (!Cities.includes(city)) {
+      return res.status(400).json({ error: `Invalid city. Must be one of: ${Cities.join(', ')}` });
+    }
+  
     try {
-        const event = await Event.findById(req.params.id);
-        if (!event) return res.status(404).json({message: 'Event not found' });
-        res.json(event);
-    } catch (err) {
-        res.status(500).json({ error: err.message });
+      const cityEvents = await Event.find({ city });
+      res.json(cityEvents);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+// Get events by category (e.g., /events/category/MUSIC)
+app.get('/events/Category/:categories', async (req, res) => {
+    const category = req.params.categories.toUpperCase();
+    if (!Categories.includes(category)) {
+        return res.status(400).json({ error: `Invalid category. Must be one of: ${Categories.join(', ')}` });
+      }
+    try {
+        const events = await Event.find({ category });
+        res.status(200).json(events);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
     }
 });
 

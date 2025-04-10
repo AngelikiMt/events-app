@@ -11,15 +11,13 @@ Backend: Node.js (RESTFUL API)
 Database: MongoDM
 
 # API Endpoints
-```Get all events: /api/events```
+```Home page: https://events-app-med4.onrender.com/```
 
-```Get a single event: /api/events/:id```
+```Get all events: https://events-app-med4.onrender.com/events```
 
-```Post an event: /api/events/post```
+```Get all events by category: https://events-app-med4.onrender.com/events/category/MUSIC```
 
-```Put an event: /api/events/edit/:id```
-
-```Delete an event: /api/events/delete/:id```
+```Get all events by city: https://events-app-med4.onrender.com/events/Thessaloniki```
 
 # Installation
 1. Fork the repository
