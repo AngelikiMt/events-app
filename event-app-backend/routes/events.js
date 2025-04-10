@@ -38,7 +38,7 @@ router.get('/events/:city', async (req, res) => {
   });
 
 // Get events by category (e.g., /events/category/MUSIC)
-app.get('/events/Category/:categories', async (req, res) => {
+router.get('/events/Category/:categories', async (req, res) => {
     const category = req.params.categories.toUpperCase();
     if (!Categories.includes(category)) {
         return res.status(400).json({ error: `Invalid category. Must be one of: ${Categories.join(', ')}` });
