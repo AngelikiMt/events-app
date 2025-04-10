@@ -2,32 +2,18 @@
 
 const mongoose = require('mongoose');
 
-enum class City {
-    ATHENS,
-    THESSALONIKI,
-    PATRA,
-    LARISSA
-}
-
-enum class Category {
-    MUSIC,
-    SPORTS,
-    CULTURE,
-    FOOD,
-    ARTS,
-    EDUCATION,
-    ENTERTAINMENT
-} 
+const Cities = ['ATHENS', 'THESSALONIKI', 'PATRA', 'LARISSA'];
+const Categories = ['MUSIC', 'SPORTS', 'CULTURE', 'FOOD', 'ARTS', 'EDUCATION', 'ENTERTAINMENT'];
 
 const eventSchema = new mongoose.Schema({
     title: { type: String, required: true },
     description: String,
-    city: City,
-    category: Category,
+    city: { type: String, enum: Cities, required: true },
+    category: { type: String, enum: Categories, required: true },
     imageUrl: String,
     date: { type: Date, required: true},
     location: String,
-    viewCount: Int = 0,
+    viewCount: { type: Number, default: 0 },
     createdAt: { type: Date, default: Date.now }
 });
 
