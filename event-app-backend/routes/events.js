@@ -1,8 +1,8 @@
 // It handles the RESTful API routes to manage the events. 
 
 const express = require('express');
-const Event = require('../models/Event');
 const router = express.Router();
+const Event = require('../models/Event');
 
 // Get all events
 router.get('/', async (req, res) => {

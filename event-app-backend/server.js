@@ -4,8 +4,8 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const eventRoutes = require('./routes/events');
 const morgan = require('morgan');
+const eventRoutes = require('./routes/events');
 
 const app = express();
 
@@ -15,11 +15,12 @@ app.use(cors());
 app.use(morgan('dev'));
 
 // Routes
-app.use('/api/events', eventRoutes); // Create the routes imported from ./routes/events file.
+app.use('/events', eventRoutes); // Create the routes imported from ./routes/events file.
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
 }).then(() => {
     console.log('MongoDB connected');
 }).catch(err => console.error('MongoDB connection error:', err));
