@@ -23,6 +23,20 @@ router.get('/events', async (req, res) => {
     }
 });
 
+// Get details of an event by ID
+router.get('/events/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        const event = await Event.findById(id);
+        if (!event) {
+            return res.status(404).json({ message: 'Event not found' });
+        }
+        res.status(200).json(event);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
 // GET events by city (e.g., /events/Thessaloniki)
 router.get('/events/:city', async (req, res) => {
     const city = req.params.city.toUpperCase();
