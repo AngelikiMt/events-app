@@ -20,7 +20,6 @@ app.use('/', eventRoutes); // Create the routes imported from ./routes/events fi
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
 }).then(() => {
     console.log('MongoDB connected');
 }).catch(err => console.error('MongoDB connection error:', err));

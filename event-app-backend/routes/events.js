@@ -9,7 +9,8 @@ const Categories = ['MUSIC', 'SPORTS', 'CULTURE', 'FOOD', 'ARTS', 'EDUCATION', '
 
 // Get homepage
 router.get('/', (req, res) => {
-    res.send('Welcome to BookNGo APP!! /n You can browse on /events, /events/:city, or /events/category/:category');
+    const message = "Welcome to BookNGo APP! Check our events and book your tickets!"
+    res.send(message);
 });
 
 // Get all events
@@ -51,8 +52,8 @@ router.get('/events/Category/:categories', async (req, res) => {
     }
 });
 
-// Post (Create) a new event
-router.post('/post/', async (req, res) => {
+// Post a new event
+router.post('/events/post', async (req, res) => {
     try {
         const newEvent = new Event(req.body);
         await newEvent.save();
@@ -62,7 +63,7 @@ router.post('/post/', async (req, res) => {
     }
 });
 
-// Put (Update) an event
+// Put an event
 router.put('/edit/:id', async (req, res) => {
     try {
         const updatedEvent = await Event.findByIdAndUpdate(req.params.id, req.body, { new: true });
