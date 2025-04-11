@@ -19,6 +19,8 @@ Database: MongoDM
 
 ```Get all events by city: https://events-app-med4.onrender.com/events/Thessaloniki```
 
+```Get details of an event: https://events-app-med4.onrender.com/events/67f8c130b28d59db92b229f7```
+
 # Installation
 1. Fork the repository
 2. Clone the repository at your IDE ``` git clone ```
