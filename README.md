@@ -17,7 +17,7 @@ Database: MongoDM
 
 ```Get all events by category: https://events-app-med4.onrender.com/events/category/MUSIC```
 
-```Get all events by city: https://events-app-med4.onrender.com/events/Thessaloniki```
+```Get all events by city: https://events-app-med4.onrender.com/events/THESSALONIKI```
 
 ```Get details of an event: https://events-app-med4.onrender.com/events/67f8c130b28d59db92b229f7```
 
