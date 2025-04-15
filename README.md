@@ -4,7 +4,6 @@ Events App is a powerful and easy-to-use event management application that allow
 # Features
 
 # Tech Stack
-Frontend: Kotlin
 
 Backend: Node.js (RESTFUL API)
 
