@@ -17,7 +17,9 @@ Database: MongoDM
 
 ```Get all events by category: https://events-app-med4.onrender.com/events/category/MUSIC```
 
-```Get all events by city: https://events-app-med4.onrender.com/events/Thessaloniki```
+```Get all events by city: https://events-app-med4.onrender.com/events/city/THESSALONIKI```
+
+```Get details of an event: https://events-app-med4.onrender.com/events/id/67f8c130b28d59db92b229f7```
 
 # Installation
 1. Fork the repository
