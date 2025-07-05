@@ -27,6 +27,8 @@ function EventDetail() {
                     <p><strong>Location:</strong> {event.location}</p>
                 </div>
             </div>
+            <br/>
+            <br/>
         </div>
     );
 }
