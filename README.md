@@ -15,17 +15,29 @@ BookNGo is a full-stack web application built to help users discover, browse, cr
 
 ## Features
 <b>1. Home Page</b>
+
 API Endpoint: https://events-app-med4.onrender.com/
+
 <b>2. View All Events</b>
+
 API Endpoint: https://events-app-med4.onrender.com/events
+
 <b>3. View Event By Id</b>
+
 API Endpoint: https://events-app-med4.onrender.com/events/id/<id>
+
 <b>4. Filter Events By Category</b>
+
 API Endpoint: https://events-app-med4.onrender.com/events/categories
+
 <b>5. Filter Events By City</b>
+
 API Endpoint: https://events-app-med4.onrender.com/events/cities
+
 <b>6. Create An Event</b>
+
 API Endpoint: https://events-app-med4.onrender.com/add
+
 <b>7. UI styled with Bootstrap 5</b>
 
 ## Installation
