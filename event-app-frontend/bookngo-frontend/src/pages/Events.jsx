@@ -50,6 +50,8 @@ function Events() {
           ⬅ Back to Home
         </Link>
       </div>
+      <br/>
+      <br/>
     </div>
   );
 }
