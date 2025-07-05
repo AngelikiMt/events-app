@@ -49,6 +49,8 @@ function Cities() {
       <div className="text-center mt-5">
         <Link to="/" className="btn btn-outline-secondary">⬅ Back to Home</Link>
       </div>
+      <br/>
+      <br/>
     </div>
   );
 }
