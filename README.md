@@ -16,11 +16,11 @@ BookNGo is a full-stack web application built to help users discover, browse, cr
 ## Features
 <b>1. Home Page</b>
 
-API Endpoint: https://events-app-med4.onrender.com/
+API Endpoint: https://events-app-1-eyia.onrender.com/
 
 <b>2. View All Events</b>
 
-API Endpoint: https://events-app-med4.onrender.com/events
+API Endpoint: https://events-app-1-eyia.onrender.com/events
 
 <b>3. View Event By Id</b>
 
@@ -28,15 +28,15 @@ API Endpoint: https://events-app-med4.onrender.com/events/id/<id>
 
 <b>4. Filter Events By Category</b>
 
-API Endpoint: https://events-app-med4.onrender.com/events/categories
+API Endpoint: https://events-app-1-eyia.onrender.com/events/categories
 
 <b>5. Filter Events By City</b>
 
-API Endpoint: https://events-app-med4.onrender.com/events/cities
+API Endpoint: https://events-app-1-eyia.onrender.com/events/cities
 
 <b>6. Create An Event</b>
 
-API Endpoint: https://events-app-med4.onrender.com/add
+API Endpoint: https://events-app-1-eyia.onrender.com/events/post
 
 <b>7. UI styled with Bootstrap 5</b>
 
