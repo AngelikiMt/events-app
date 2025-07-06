@@ -1,5 +1,5 @@
 # BookNGo - Event Discovery App
-BookNGo is a full-stack web application built to help users discover, browse, create, and manage events across various cities in Greece.
+BookNGo is a MERN full-stack web application, built to help users discover, browse, create, and manage events across various cities in Greece.
 
 ## Tech Stack
 
