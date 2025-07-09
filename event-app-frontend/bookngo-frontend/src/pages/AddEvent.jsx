@@ -59,16 +59,14 @@ function AddEvent() {
                         <textarea className="form-control" name="description" placeholder="Description" onChange={handleChange}></textarea>
                     </div>
                     <div className="col-12">
-                        <button className="btn btn-primary">Submit Event</button>
+                        <button className="btn btn-success">Submit Event</button>
                     </div>
                 </div>
             </form>
 
             {/* Back to Home Button */}
             <div className="text-center mt-4">
-                <Link to="/" className="btn btn-outline-secondary">
-                ⬅ Back to Home
-                </Link>
+                <Link to="/" className="btn btn-outline-primary">Back to Home</Link>
             </div>
         </div>
     );

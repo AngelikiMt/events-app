@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getEventById } from '../api/events';
 
@@ -25,6 +25,12 @@ function EventDetail() {
                     <p><strong>Category:</strong> {event.category}</p>
                     <p><strong>Date:</strong> {new Date(event.date).toLocaleDateString()}</p>
                     <p><strong>Location:</strong> {event.location}</p>
+                    <p><strong>Created At:</strong> {new Date(event.createdAt).toLocaleDateString()}</p>
+                    <br/>
+                    <p><strong>Views:</strong> {event.viewCount}</p>
+
+                    <hr/>
+                    <Link to={`/edit/${event._id}`} className="btn btn-outline-warning mt-3">Edit Event</Link>
                 </div>
             </div>
             <br/>

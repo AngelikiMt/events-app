@@ -40,7 +40,7 @@ function Categories() {
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{event.title}</h5>
                 <p className="text-muted">{event.city} | {event.category}</p>
-                <Link to={`/events/id/${event._id}`} className="btn btn-primary mt-auto">View</Link>
+                <Link to={`/events/id/${event._id}`} className="btn btn-outline-warning mt-auto">View</Link>
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@ function Categories() {
       </div>
 
       <div className="text-center mt-5">
-        <Link to="/" className="btn btn-outline-secondary">⬅ Back to Home</Link>
+        <Link to="/" className="btn btn-outline-primary">Back to Home</Link>
       </div>
       <br/>
       <br/>

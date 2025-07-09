@@ -24,7 +24,7 @@ API Endpoint: https://events-app-1-eyia.onrender.com/events
 
 <b>3. View Event By Id</b>
 
-API Endpoint: https://events-app-med4.onrender.com/events/id/<id>
+API Endpoint:  https://events-app-1-eyia.onrender.com/events/id/
 
 <b>4. Filter Events By Category</b>
 
@@ -38,7 +38,11 @@ API Endpoint: https://events-app-1-eyia.onrender.com/events/cities
 
 API Endpoint: https://events-app-1-eyia.onrender.com/events/post
 
-<b>7. UI styled with Bootstrap 5</b>
+<b>7. Edit an event</b>
+
+API Endpoint:  https://events-app-1-eyia.onrender.com/edit/
+
+<b>8. UI styled with Bootstrap 5</b>
 
 ## Installation
 

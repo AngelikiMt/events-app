@@ -7,7 +7,10 @@ function Events() {
 
   useEffect(() => {
     fetchEvents()
-      .then(res => setEvents(res.data))
+      .then(res => {
+        if (!Array.isArray(res.data)) throw new Error('Invalid data format');
+        setEvents(res.data);
+      })
       .catch(err => console.error('Error fetching events:', err));
   }, []);
 
@@ -31,9 +34,7 @@ function Events() {
                 <h5 className="card-title">{event.title}</h5>
                 <p className="card-text text-muted">{event.city} | {event.category}</p>
                 <p className="card-text small">{new Date(event.date).toLocaleDateString()}</p>
-                <Link to={`/events/id/${event._id}`} className="btn btn-primary mt-auto">
-                  View Details
-                </Link>
+                <Link to={`/events/id/${event._id}`} className="btn btn-outline-warning mt-auto">View Details</Link>
               </div>
             </div>
           </div>
@@ -46,9 +47,7 @@ function Events() {
 
       {/* Back to Home Button */}
       <div className="text-center mt-5">
-        <Link to="/" className="btn btn-outline-secondary">
-          ⬅ Back to Home
-        </Link>
+        <Link to="/" className="btn btn-outline-primary">Back to Home</Link>
       </div>
       <br/>
       <br/>

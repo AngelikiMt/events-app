@@ -4,7 +4,7 @@ function Home() {
     return (
         <div className="container text-center mt-5">
             <h1 className="mb-4"> Welcome to BookNGo!</h1>
-            <p className="lead mb-5">Discover and book events in Greece with ease!</p>
+            <p className="lead mb-5">Discover and book events <br/> in Greece with ease!</p>
             <div className="row justify-content-center g-4">
                 <div className="col-6 col-md-3">
                     <Link to="/events" className="btn btn-primary w-100">Browse All Events</Link>

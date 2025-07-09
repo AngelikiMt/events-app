@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 router.get('/events', async (req, res) => {
     try {
         const events = await Event.find();
-        if (!events) {
+        if (events.length === 0) {
             return res.status(404).json({ message: 'Events not found' });
         }
         res.status(200).json(events);
@@ -30,7 +30,11 @@ router.get('/events', async (req, res) => {
 router.get('/events/id/:id', async (req, res) => {
     const { id } = req.params;
     try {
-        const event = await Event.findById(id);
+        const event = await Event.findByIdAndUpdate(
+            id,
+            { $inc: { viewCount: 1 } },
+            { new: true }
+        );
         if (!event) {
             return res.status(404).json({ message: 'Event not found' });
         }
